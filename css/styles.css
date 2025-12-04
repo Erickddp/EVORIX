@@ -1783,3 +1783,204 @@ footer {
   border-bottom-style: solid;
   border-bottom-color: #ffffff;
 }
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+/* =========================================
+   13. RESPONSIVE OVERRIDES
+   ========================================= */
+
+/* 1. Typography & Spacing */
+.hero-title {
+    font-size: clamp(1.8rem, 4vw, 3.4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* 2. Header / Navigation */
+@media (max-width: 768px) {
+    .site {
+        height: auto;
+        padding: 12px 0;
+        background: rgba(5, 10, 20, 0.95);
+    }
+
+    .site .container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .desktop-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .desktop-menu a:not(.btn) {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+
+    .desktop-menu .btn {
+        display: inline-flex;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        margin-top: 4px;
+    }
+}
+
+/* 3. Hero Section */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.1;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero .ctas {
+        width: 100%;
+    }
+
+    .hero .btn {
+        width: 100%;
+    }
+}
+
+/* 4. Services Section */
+@media (max-width: 900px) {
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .services-list {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 12px;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 12px;
+    }
+
+    .service-pill {
+        flex: 0 0 auto;
+        width: auto;
+        white-space: nowrap;
+        scroll-snap-align: start;
+        padding: 10px 20px;
+    }
+
+    .services-list::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .services-list::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 4px;
+    }
+
+    .service-detail-panel {
+        min-height: auto;
+        padding: 24px;
+    }
+}
+
+/* 5. Ecosystem / Dashboard */
+@media (max-width: 768px) {
+    .dash-module {
+        grid-column: span 12 !important;
+    }
+
+    .evoapp {
+        padding: 24px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dash-module {
+        grid-column: span 6 !important;
+    }
+
+    .evoapp {
+        grid-row: auto;
+    }
+}
+
+/* 6. About Me */
+@media (max-width: 768px) {
+    .about-layout {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .avatar-placeholder {
+        width: 200px;
+        height: 200px;
+        max-width: 60vw;
+        max-height: 60vw;
+    }
+}
+
+/* 7. Recognitions & Contact Grids */
+@media (max-width: 768px) {
+
+    .recognitions-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 8. Global Safety */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+canvas {
+    max-width: 100vw;
+}
